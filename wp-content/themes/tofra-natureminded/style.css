@@ -1,0 +1,172 @@
+/*
+Theme Name: tofra-natureminded-rtl
+Theme URI: http://www.tofraweb.com/
+Author: tofra
+Author URI: http://www.tofraweb.com/
+Description: Description
+Version: 1.0.0
+License: MIT
+License URI: LICENSE
+Text Domain: tofra-natureminded
+
+*/
+
+
+body {
+  padding-top: 3.5rem;
+}
+
+a {
+	color: #818182;
+}
+
+.row {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.sidebar h3 {
+	color: #888;
+}
+
+.sidebar{
+	margin-top: 15px;
+	color: #444;
+}
+
+.widget {
+	margin-bottom: 40px;
+}
+
+.post {
+	margin: 20px 0 40px;
+}
+
+/*images*/
+
+
+@media (max-width:540px) {
+	.portfolio-piece h5 {
+		font-size: .8em;
+	}
+
+}
+
+@media (max-width:840px) {
+	.portfolio-piece h5 {
+		font-size: 1.0em;
+	}
+
+}
+
+.featured-image img,
+.portfolio-piece img,
+.portfolio-image img {
+	max-width: 100%;
+}
+
+.prev-next {
+	font-size: 30px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+
+
+.admin-bar .fixed-top{
+	margin-top: 30px;
+}
+
+
+.navbar-nav li {
+	margin-right: 10px;
+}
+
+.navbar-nav li a {
+	color: #868e96;
+	padding: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar-nav : hover {
+	background-color: white;
+}
+
+a:hover { 
+    color: #ced4da !important;
+}
+
+.navbar-brand {
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.current-menu-item a {
+	color: #ced4da !important;
+}
+
+.current-menu-parent > a {
+	color: #ced4da !important;
+}
+
+.dropdown-menu a {
+	font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+
+.btn-primary {
+	cursor: pointer !important;	
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right .sidebar-offcanvas {
+    right: -100%; /* 12 columns */
+  }
+
+  .row-offcanvas-right.active .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left .sidebar-offcanvas {
+    left: -100%; /* 12 columns */
+  }
+
+  .row-offcanvas-left.active .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}

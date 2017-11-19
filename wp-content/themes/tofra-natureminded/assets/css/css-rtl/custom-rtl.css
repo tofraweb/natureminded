@@ -1,0 +1,16 @@
+/* Add here all your css styles (customizations) */
+.img-catalog {
+  min-height: 170px !important;
+}
+
+.progress-bar-watering{
+  text-align: right !important;
+    padding-right: 5px;
+}
+
+.progress-bar-sunlight{
+  text-align: right !important;
+  background-color: #cff760;
+  padding-right: 5px;
+  color: #555555 !important;
+}
