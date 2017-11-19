@@ -7,6 +7,10 @@
     global $post;
     if ( $post ) {
         $categories = get_the_category( $post->ID );
+        // echo "<pre>";
+        // var_dump($categories[0]);
+        // echo "</pre>";
+        // exit;
         $cat_id = $categories[0]->cat_ID;
         $cat_name = $categories[0]->name;
         $p_cat_id = $categories[0]->parent;
@@ -14,6 +18,8 @@
         $p_cat_name = $p_cat_id->name;
         $pp_cat_id = $p_cat_id->parent;
         $pp_cat_id = get_category($pp_cat_id);
+        $cat_lat_name = ucfirst(urldecode($pp_cat_id->slug));
+        $cat_hun_name = $pp_cat_id->description;
         $pp_cat_name = $pp_cat_id->name;
     } 
   ?>  
@@ -62,6 +68,21 @@
               <div class="headline" style="text-align:right">
                 <h2><small>סוג</small> <?php echo $cat_name; ?> </h2>
               </div> 
+
+                <ul class="list-inline badge-lists margin-bottom-30">
+                  <li>
+                    <a class="btn-u btn-u-xs btn-u-default" href="#">Info</a>
+                    <span class="badge badge-blue">7</span>
+                  </li>
+                  <li>
+                    <a class="btn-u btn-u-xs btn-u-dark" href="#"><?php echo $cat_hun_name; ?></a>
+                    <span class="badge badge-red rounded-2x">9</span> 
+                  </li>
+                  <li>
+                    <a class="btn-u btn-u-xs btn-u-default" href="#"><?php echo $cat_lat_name; ?></a>
+                    <span class="badge badge-green rounded">1</span>
+                  </li>
+                </ul>
 
               <h1><?php the_title(); ?></h1>
               <?php the_field('hungarian_name'); ?>

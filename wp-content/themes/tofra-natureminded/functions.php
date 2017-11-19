@@ -134,3 +134,28 @@ function search_filter( $query ) {
 }
  
 add_action( 'pre_get_posts','search_filter' );
+
+//adding custom fields to category
+function addLatinNameFieldToCat(){
+    $cat_title = get_term_meta($_POST['tag_ID'], 'lat_cat_name', true);
+    ?> 
+    <tr class="form-field">
+        <th scope="row" valign="top"><label for="cat_page_title"><?php _e('שם בלטינית'); ?></label></th>
+        <td>
+        <input type="text" name="lat_cat_name" id="lat_cat_name" value="<?php echo $cat_title ?>"><br />
+            <span class="description"><?php _e('שם בלטינית '); ?></span>
+        </td>
+    </tr>
+    <?php
+
+}
+add_action ( 'edit_category_form_fields', 'addLatinNameFieldToCat');
+
+function saveCategoryFields() {
+	// var_dump('hahaha');
+	// exit;
+    if ( isset( $_POST['lat_cat_name'] ) ) {
+        update_term_meta($_POST['tag_ID'], 'lat_cat_name', $_POST['lat_cat_name']);
+    }
+}
+add_action ( 'edited_category', 'saveCategoryFields');
