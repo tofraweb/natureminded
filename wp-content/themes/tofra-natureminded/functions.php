@@ -46,9 +46,9 @@ function tofra_wp_boot_scripts() {
 	wp_enqueue_script( 'tofra_boot-custom-js', get_template_directory_uri() . '/assets/js/custom.js','','', TRUE  );
 	/*JS Page Level*/
 	wp_enqueue_script( 'tofra_boot-app-js', get_template_directory_uri() . '/assets/js/app.js','','', TRUE  );
-	wp_enqueue_script( 'tofra_boot-carousel-js', get_template_directory_uri() . '/assets/plugins/owl-carousel2/owl.carousel.min.js','','', TRUE  );
-	wp_enqueue_script( 'tofra_boot-parallax-slider-js', get_template_directory_uri() . '/assets/js/plugins/style-switcher-rtl.js','','', TRUE  );
-	wp_enqueue_script( 'tofra_boot-carousel-js', get_template_directory_uri() . '/assets/js/plugins/parallax-slider.js','','', TRUE  );
+	wp_enqueue_script( 'tofra_boot-carousel-rtl-js', get_template_directory_uri() . '/assets/js/plugins/owl-carousel-rtl.js','','', TRUE  );
+	wp_enqueue_script( 'tofra_boot-style-switcher-rtl-js', get_template_directory_uri() . '/assets/js/plugins/style-switcher-rtl.js','','', TRUE  );
+	wp_enqueue_script( 'tofra_boot-parallax-slider-js', get_template_directory_uri() . '/assets/js/plugins/parallax-slider.js','','', TRUE  );
 
 
 

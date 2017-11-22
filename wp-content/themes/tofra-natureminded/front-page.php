@@ -135,7 +135,7 @@
 				<!-- Latest Shots -->
 				<div class="col-md-4">
 						<div class="headline"><h2>תמונות אחרונות</h2></div>
-						<?php if( dynamic_sidebar( 'front-left' ) ); ?>
+						<?php// if( dynamic_sidebar( 'front-left' ) ); ?>
 				</div><!--/col-md-4-->
 		</div>
 		<!-- End Info Blokcs -->
