@@ -135,27 +135,54 @@ function search_filter( $query ) {
  
 add_action( 'pre_get_posts','search_filter' );
 
-//adding custom fields to category
-function addLatinNameFieldToCat(){
-    $cat_title = get_term_meta($_POST['tag_ID'], 'lat_cat_name', true);
-    ?> 
-    <tr class="form-field">
-        <th scope="row" valign="top"><label for="cat_page_title"><?php _e('שם בלטינית'); ?></label></th>
-        <td>
-        <input type="text" name="lat_cat_name" id="lat_cat_name" value="<?php echo $cat_title ?>"><br />
-            <span class="description"><?php _e('שם בלטינית '); ?></span>
-        </td>
-    </tr>
-    <?php
 
+
+//add extra fields to category edit form hook
+add_action ( 'edit_category_form_fields', 'extra_category_fields');
+//add extra fields to category edit form callback function
+function extra_category_fields( $tag ) {    //check for existing featured ID
+    $t_id = $tag->term_id;
+    $cat_meta = get_option( "category_$t_id");
+	?>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="cat_Image_url"><?php _e('Category Image Url'); ?></label></th>
+	<td>
+	<input type="text" name="Cat_meta[img]" id="Cat_meta[img]" size="3" style="width:60%;" value="<?php echo $cat_meta['img'] ? $cat_meta['img'] : ''; ?>"><br />
+	            <span class="description"><?php _e('Image for category: use full url with '); ?></span>
+	        </td>
+	</tr>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="extra1"><?php _e('Latin Name'); ?></label></th>
+	<td>
+	<input type="text" name="Cat_meta[latin_name]" id="Cat_meta[latin_name]" size="25" style="width:60%;" value="<?php echo $cat_meta['latin_name'] ? $cat_meta['latin_name'] : ''; ?>"><br />
+	            <span class="description"><?php _e('Latin category name'); ?></span>
+	        </td>
+	</tr>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="extra2"><?php _e('Hungarian name'); ?></label></th>
+	<td>
+	<input type="text" name="Cat_meta[hungarian_name]" id="Cat_meta[hungarian_name]" size="25" style="width:60%;" value="<?php echo $cat_meta['hungarian_name'] ? $cat_meta['hungarian_name'] : ''; ?>"><br />
+	            <span class="description"><?php _e('Hungarian category name'); ?></span>
+	        </td>
+	</tr>
+	<?php
 }
-add_action ( 'edit_category_form_fields', 'addLatinNameFieldToCat');
 
-function saveCategoryFields() {
-	// var_dump('hahaha');
-	// exit;
-    if ( isset( $_POST['lat_cat_name'] ) ) {
-        update_term_meta($_POST['tag_ID'], 'lat_cat_name', $_POST['lat_cat_name']);
+
+// save extra category extra fields hook
+add_action ( 'edited_category', 'save_extra_category_fileds');
+   // save extra category extra fields callback function
+function save_extra_category_fileds( $term_id ) {
+    if ( isset( $_POST['Cat_meta'] ) ) {
+        $t_id = $term_id;
+        $cat_meta = get_option( "category_$t_id");
+        $cat_keys = array_keys($_POST['Cat_meta']);
+            foreach ($cat_keys as $key){
+            if (isset($_POST['Cat_meta'][$key])){
+                $cat_meta[$key] = $_POST['Cat_meta'][$key];
+            }
+        }
+        //save the option array
+        update_option( "category_$t_id", $cat_meta );
     }
 }
-add_action ( 'edited_category', 'saveCategoryFields');

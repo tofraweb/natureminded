@@ -51,7 +51,7 @@
             <!-- Topbar -->
             <div class="topbar">
                 <ul class="loginbar pull-right" style="padding-top: 15px;">
-                    <form method="get" action="http://localhost/tofraweb/natureminded/">
+                    <form method="get" action="<?php bloginfo( 'url' ); ?>">
                           <div class="search-open">
                               <div class="input-group animated fadeInDown">
                                   <input type="text" class="form-control" name="s" id="s" placeholder="חיפוש באתר">

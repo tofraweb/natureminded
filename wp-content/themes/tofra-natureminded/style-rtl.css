@@ -83,6 +83,10 @@ a:hover {
 	content: none !important;
 }
 
+.owl-page{
+	display: none !important;
+}
+
 
 /*Boxed Layout
 ------------------------------------*/
