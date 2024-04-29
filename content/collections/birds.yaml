@@ -3,6 +3,8 @@ template: birds/show
 layout: layout
 taxonomies:
   - genera
+  - families
+  - orders
 revisions: false
 route: '/bird/{slug}'
 sort_dir: asc

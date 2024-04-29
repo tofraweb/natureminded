@@ -21,13 +21,20 @@
             {{ /genus }}
 
             <hr class="mb-4">
-            {{ if genera }}
-            <ul>
-                {{ genera }}
-                    <li><a href="{{ url }}">{{ title }}</a></li>
-                {{ /genera }}
-            </ul>
-            {{ /if }}
+
+            <div class="flex">
+                {{ if genera }}
+                    {{ genera }}
+                        <div class="ml-4">סוג: <a href="{{ url }}">{{ title }}</a></div>
+                    {{ /genera }}
+                {{ /if }}
+
+                {{ if families }}
+                    {{ families }}
+                        <div class="ml-4">משפחה: <a href="{{ url }}">{{ title }}</a></div>
+                    {{ /families }}
+                {{ /if }}
+             </div>
 
 
         {{ $intro }}

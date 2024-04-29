@@ -81,8 +81,10 @@ tabs:
             handle: slug
             field:
               type: slug
-              localizable: true
-              validate: 'max:200'
+              required: true
+              validate:
+                - required
+                - 'max:200'
               display: Slug
               instructions_position: above
               listable: hidden
@@ -92,38 +94,4 @@ tabs:
               generate: true
               show_regenerate: true
               hide_display: false
-          -
-            handle: genera
-            field:
-              type: terms
-              taxonomies:
-                - genera
-              display: Genera
-              mode: select
-          -
-            handle: hero_image
-            field:
-              max_files: 1
-              mode: grid
-              container: assets
-              folder: birds
-              restrict: true
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: 'Hero Image'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: families
-            field:
-              type: terms
-              taxonomies:
-                - families
-              display: Families
-              mode: select
-title: Bird
+title: Order
