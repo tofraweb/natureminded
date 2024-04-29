@@ -1,0 +1,18 @@
+---
+id: ddbd616d-2a42-4c70-ad6c-06346e92fb29
+blueprint: bird
+title: 'דרור הבית'
+name_he: 'דרור הבית'
+name_la: 'Passer domesticus'
+name_hu: 'Házi veréb'
+name_en: 'House sparrow'
+genera:
+  - passer
+hero_image: birds/1539352167img_3947.jpeg
+families:
+  - passeridae
+orders:
+  - passeriformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714420088
+---
