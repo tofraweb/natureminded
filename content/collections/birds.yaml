@@ -1,7 +1,16 @@
 title: Birds
+template: birds/show
+layout: layout
 taxonomies:
   - genera
 revisions: false
+route: '/bird/{slug}'
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
