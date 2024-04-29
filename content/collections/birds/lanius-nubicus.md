@@ -12,5 +12,7 @@ families:
 orders:
   - passeriformes
 updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
-updated_at: 1714400851
+updated_at: 1714419747
+hero_image: birds/1683559390img_6205.jpeg
+name_en: 'Masked shrike'
 ---

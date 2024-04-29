@@ -2,3 +2,28 @@ name: 'Tomi Frank'
 super: true
 id: 9e099556-0278-43e4-b8a2-64728f12886d
 password_hash: $2y$10$JQUbcNUo3gvxLkjXKgrBi.vtWS2HDlu9xsyfMsCYTERounR7pQp3e
+preferences:
+  taxonomies:
+    genera:
+      columns:
+        - title
+        - name_la
+        - name_hu
+    families:
+      columns:
+        - title
+        - name_la
+        - name_hu
+    orders:
+      columns:
+        - title
+        - name_la
+        - name_hu
+  collections:
+    birds:
+      columns:
+        - title
+        - hero_image
+        - name_la
+        - name_en
+        - name_hu
