@@ -1,0 +1,31 @@
+<div class="max-w-5xl mx-auto relative mt-16 content">
+
+    <article class="max-w-6xl mx-auto px-3">
+        <header class="mx-auto max-w-xl text-center content">
+            <h1 class="mb-4">Birds</h1>
+        </header>
+        {{ collection:birds as="posts" paginate="12" sort="date:desc" }}
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+                {{ posts }}
+                    <div class="col-span-1">
+                        {{ partial:birds/card }}
+                    </div>
+                {{ /posts }}
+            </section>
+            {{ paginate }}
+                {{ if $prev_page || $next_page }}
+                <section class="flex space-x-8 justify-center text-xl pt-16 font-bold">
+                    {{ if $prev_page }}
+                        <a href="{{ $prev_page }}"><span class="squiggle">&larr;</span> Newer articles</a>
+                    {{ /if }}
+                    {{ if $next_page }}
+                        <a href="{{ $next_page }}">Older articles <span class="squiggle">&rarr;</span></a>
+                    {{ /if }}
+                </section>
+                {{ /if }}
+            {{ /paginate }}
+        {{ /collection:birds }}
+    </article>
+
+</div>
+
