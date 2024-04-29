@@ -1,0 +1,112 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: name_he
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Hebrew Name'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: name_la
+            field:
+              type: text
+              width: 50
+              validate:
+                - required
+              display: 'Latin Name'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              input_type: text
+              antlers: false
+              hide_display: false
+          -
+            handle: name_hu
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Hungarian Name'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: name_en
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'English Name'
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: genera
+            field:
+              type: terms
+              taxonomies:
+                - genera
+              display: Genera
+              mode: select
+          -
+            handle: hero_image
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              folder: birds
+              restrict: true
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Hero Image'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+title: Bird
