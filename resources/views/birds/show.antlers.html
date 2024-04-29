@@ -31,9 +31,16 @@
 
                 {{ if families }}
                     {{ families }}
-                        <div class="ml-4">משפחה: <a href="{{ url }}">{{ title }}</a></div>
+                        <div class="ml-4"   >משפחה: <a href="{{ url }}">{{ title }}</a></div>
                     {{ /families }}
                 {{ /if }}
+
+                {{ if orders }}
+                    {{ orders }}
+                        <div class="ml-4"   >סדרה: <a href="{{ url }}">{{ title }}</a></div>
+                    {{ /orders }}
+                {{ /if }}
+
              </div>
 
 
