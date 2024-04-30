@@ -1,0 +1,18 @@
+---
+id: f2c99a2e-9cd3-43a0-9c5f-13539e96f1b6
+blueprint: bird
+title: 'בז מצוי'
+name_he: 'בז מצוי'
+name_la: 'Falco tinnunculus'
+name_hu: 'Vörös vércse'
+name_en: 'Common kestrel'
+genera:
+  - falco
+hero_image: birds/1547378438img_4833---copy.jpeg
+families:
+  - falconidae
+orders:
+  - falconiformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714478357
+---

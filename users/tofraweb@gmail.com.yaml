@@ -28,3 +28,4 @@ preferences:
         - name_en
         - name_hu
       per_page: 25
+      after_save: continue_editing
