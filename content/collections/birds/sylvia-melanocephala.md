@@ -1,0 +1,18 @@
+---
+id: 42df8296-fac1-41c9-b914-b152f3d2f5e9
+blueprint: bird
+title: 'סבכי שחור ראש'
+name_he: 'סבכי שחור ראש'
+name_la: 'Sylvia melanocephala'
+name_hu: 'Kucsmás poszáta'
+name_en: 'Sardinian warbler'
+genera:
+  - sylvia
+hero_image: birds/1680893176img_64072.jpeg
+families:
+  - sylviidae
+orders:
+  - passeriformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714465905
+---

@@ -27,3 +27,4 @@ preferences:
         - name_la
         - name_en
         - name_hu
+      per_page: 25

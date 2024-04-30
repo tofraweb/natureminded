@@ -1,0 +1,18 @@
+---
+id: c9e48f09-b0c5-4559-ac5a-85f4c5cd054d
+blueprint: bird
+title: דוכיפת
+name_he: דוכיפת
+name_la: 'Upupa epops'
+name_hu: 'Búbos banka'
+name_en: 'Eurasian hoopoe'
+genera:
+  - upupa
+hero_image: birds/1539352097img_0004.jpeg
+families:
+  - upupidae
+orders:
+  - bucerotiformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714464167
+---
