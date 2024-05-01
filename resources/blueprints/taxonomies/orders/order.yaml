@@ -18,7 +18,7 @@ tabs:
               antlers: false
               type: text
               display: 'Hebrew Name'
-              width: 50
+              width: 33
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -30,7 +30,7 @@ tabs:
             handle: name_la
             field:
               type: text
-              width: 50
+              width: 33
               validate:
                 - required
               display: 'Latin Name'
@@ -48,20 +48,7 @@ tabs:
               antlers: false
               type: text
               display: 'Hungarian Name'
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: name_en
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: 'English Name'
-              width: 50
+              width: 33
               listable: hidden
               instructions_position: above
               visibility: visible

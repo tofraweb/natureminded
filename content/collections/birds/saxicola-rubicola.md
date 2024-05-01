@@ -1,0 +1,18 @@
+---
+id: ba290798-e9da-4a47-999f-1e728a40f9e7
+blueprint: bird
+title: 'דוחל שחור-גרון'
+name_he: 'דוחל שחור-גרון'
+name_la: 'Saxicola rubicola'
+name_hu: Cigánycsuk
+name_en: 'European stonechat'
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714592573
+genera:
+  - saxicola
+hero_image: birds/1547378098img_4777---copy.jpeg
+families:
+  - muscicapidae
+orders:
+  - passeriformes
+---

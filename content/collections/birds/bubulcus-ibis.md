@@ -1,0 +1,18 @@
+---
+id: f7daca24-8818-4232-a09d-ccbe9d163e36
+blueprint: bird
+title: 'אנפית בקר'
+name_he: 'אנפית בקר'
+name_la: 'Bubulcus ibis'
+name_hu: Pásztorgém
+name_en: 'Western cattle egret'
+genera:
+  - bubulcus
+hero_image: birds/1664110358img_0255.jpeg
+families:
+  - ardeidae
+orders:
+  - pelecaniformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714592035
+---
