@@ -1,0 +1,18 @@
+---
+id: cc1e22ae-e6f5-44ea-a425-482116cc1b25
+blueprint: bird
+title: 'קוקייה מצויצת'
+name_he: 'קוקייה מצויצת'
+name_la: 'Clamator glandarius'
+name_hu: 'Pettyes kakukk'
+name_en: 'Great spotted cuckoo'
+genera:
+  - clamator
+hero_image: birds/1684136289img_7049.jpeg
+families:
+  - cuculidae
+orders:
+  - cuculiformes
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1714589760
+---
