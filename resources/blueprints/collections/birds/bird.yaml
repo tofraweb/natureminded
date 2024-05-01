@@ -93,14 +93,6 @@ tabs:
               show_regenerate: true
               hide_display: false
           -
-            handle: genera
-            field:
-              type: terms
-              taxonomies:
-                - genera
-              display: Genera
-              mode: select
-          -
             handle: hero_image
             field:
               max_files: 1
@@ -119,6 +111,14 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: genera
+            field:
+              type: terms
+              taxonomies:
+                - genera
+              display: Genera
+              mode: select
+          -
             handle: families
             field:
               type: terms
@@ -126,4 +126,41 @@ tabs:
                 - families
               display: Families
               mode: select
+          -
+            handle: orders
+            field:
+              type: terms
+              taxonomies:
+                - orders
+              display: Orders
+              mode: select
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - birds
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              mode: single
+              inline: false
+              full_width: false
+              columns: 1
+              rows: 1
+              time_enabled: true
+              time_seconds_enabled: false
+              hide_display: false
 title: Bird
