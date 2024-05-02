@@ -4,7 +4,7 @@
         <header class="mx-auto max-w-xl text-center content">
             <h1 class="mb-4">Birds</h1>
         </header>
-        {{ collection:birds as="posts" paginate="12" }}
+        {{ collection:birds as="posts" paginate="12" sort="date:desc" }}
     
         <div style="margin: auto; text-align:center"> 
             {{ paginate }}

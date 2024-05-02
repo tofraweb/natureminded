@@ -29,3 +29,4 @@ preferences:
         - name_hu
         - date
       per_page: 25
+      after_save: continue_editing
