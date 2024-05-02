@@ -1,0 +1,30 @@
+{{# <div class="max-w-5xl mx-auto relative py-16 lg:pt-40 lg:pb-32">
+    <article class="content">
+        <p class="font-medium text-lg text-teal">{{ subtitle }}</p>
+        <h1>{{ content }}</h1>
+    </article>
+</div> #}}
+
+    <div class="max-w-5xl mx-auto mb-32">
+        {{? $num1 = rand(1,30) ?}}
+        {{? $num2 = rand(31,57) ?}}
+
+        <article class="max-w-6xl mx-auto px-3">
+            <header class="mx-auto max-w-xl text-center content">
+                <h1 class="mb-4">על פרחים וציפורים</h1>
+            </header>
+            {{ collection:birds as="posts" sort="date:desc" }}
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-8">
+                    {{ posts }}
+                        {{ if count == {{ $num1 }} || count == {{ $num2 }} }}
+                        <div class="col-span-1">
+                            {{ partial:birds/card }}
+                        </div>
+                        {{ /if }}
+                    {{ /posts }}
+                </div>
+            {{ /collection:birds }}
+        </article>
+    
+    </div>
+    
