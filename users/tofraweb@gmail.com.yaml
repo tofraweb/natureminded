@@ -33,3 +33,5 @@ preferences:
         - date
       per_page: 25
       after_save: continue_editing
+    flowers:
+      after_save: continue_editing

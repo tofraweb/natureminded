@@ -6,24 +6,33 @@
 </div> #}}
 
     <div class="max-w-5xl mx-auto mb-32">
-        {{? $num1 = rand(1,30) ?}}
-        {{? $num2 = rand(31,57) ?}}
+        {{? $num1 = rand(1,57) ?}}
+        {{? $num2 = rand(1,5) ?}}
 
         <article class="max-w-6xl mx-auto px-3">
             <header class="mx-auto max-w-xl text-center content">
                 <h1 class="mb-4">על פרחים וציפורים</h1>
             </header>
-            {{ collection:birds as="posts" sort="date:desc" }}
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-8">
-                    {{ posts }}
-                        {{ if count == {{ $num1 }} || count == {{ $num2 }} }}
-                        <div class="col-span-1">
-                            {{ partial:birds/card }}
-                        </div>
-                        {{ /if }}
-                    {{ /posts }}
+                    {{ collection:flowers as="posts" sort="date:desc" }}
+                        {{ posts }}
+                            {{ if count == {{ $num2 }} }}
+                            <div class="col-span-1">
+                                {{ partial:flowers/card }}
+                            </div>
+                            {{ /if }}
+                        {{ /posts }}
+                    {{ /collection:flowers }}
+                    {{ collection:birds as="posts" sort="date:desc" }}
+                        {{ posts }}
+                            {{ if count == {{ $num1 }} }}
+                            <div class="col-span-1">
+                                {{ partial:birds/card }}
+                            </div>
+                            {{ /if }}
+                        {{ /posts }}
+                    {{ /collection:birds }}
                 </div>
-            {{ /collection:birds }}
         </article>
     
     </div>
