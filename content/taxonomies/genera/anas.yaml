@@ -1,9 +1,10 @@
 title: ברווז
 updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
-updated_at: 1714399728
+updated_at: 1714853155
 blueprint: genus
 family_taxonomy:
   - family-1
 name_he: ברווז
 name_la: Anas
 name_hu: Anas
+category: bird

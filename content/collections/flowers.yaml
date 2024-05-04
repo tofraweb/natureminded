@@ -1,12 +1,12 @@
 title: Flowers
-template: default
+template: flowers/show
 layout: layout
 taxonomies:
   - genera
   - families
   - orders
 revisions: false
-route: '/flowers/{slug}'
+route: '/flower/{slug}'
 date: true
 sort_dir: desc
 date_behavior:

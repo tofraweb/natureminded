@@ -1,9 +1,10 @@
 title: אנפה
 updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
-updated_at: 1714656145
+updated_at: 1714853136
 blueprint: genus
 family_taxonomy:
   - family-1
 name_he: אנפה
 name_la: Nycticorax
 name_hu: Nycticorax
+category: bird

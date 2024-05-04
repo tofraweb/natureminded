@@ -9,16 +9,19 @@ preferences:
         - title
         - name_la
         - name_hu
+        - category
     families:
       columns:
         - title
         - name_la
         - name_hu
+        - category
     orders:
       columns:
         - title
         - name_la
         - name_hu
+        - category
   collections:
     birds:
       columns:

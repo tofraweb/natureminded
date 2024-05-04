@@ -81,4 +81,23 @@ tabs:
               generate: true
               show_regenerate: true
               hide_display: false
+          -
+            handle: category
+            field:
+              options:
+                bird: Bird
+                flower: Flower
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: Category
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
 title: Order
