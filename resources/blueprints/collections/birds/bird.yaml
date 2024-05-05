@@ -68,6 +68,33 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: genera
+            field:
+              type: terms
+              taxonomies:
+                - genera
+              display: Genera
+              mode: select
+              width: 33
+          -
+            handle: families
+            field:
+              type: terms
+              taxonomies:
+                - families
+              display: Families
+              mode: select
+              width: 33
+          -
+            handle: orders
+            field:
+              type: terms
+              taxonomies:
+                - orders
+              display: Orders
+              mode: select
+              width: 33
+          -
             handle: content
             field:
               type: markdown
@@ -110,30 +137,6 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
-          -
-            handle: genera
-            field:
-              type: terms
-              taxonomies:
-                - genera
-              display: Genera
-              mode: select
-          -
-            handle: families
-            field:
-              type: terms
-              taxonomies:
-                - families
-              display: Families
-              mode: select
-          -
-            handle: orders
-            field:
-              type: terms
-              taxonomies:
-                - orders
-              display: Orders
-              mode: select
           -
             handle: parent
             field:
