@@ -6,60 +6,13 @@
         </header>
         {{ collection:flowers as="posts" paginate="12" sort="date:desc" }}
     
-        <div style="margin: auto; text-align:center"> 
-            {{ paginate }}
-            <ul class="flex" style="margin: auto;text-align:center">
-                {{ if prev_page }}
-                    <li class="mx-2"><a href="{{ prev_page }}">&laquo;</a></li>
-                {{ else }}
-                    <li class="mx-2 disabled"><span>&laquo;</span></li>
-                {{ /if }}
+            <div class="mx-auto text-center"> 
+                {{ paginate }}
 
-                {{ links:segments }}
-
-                    {{ first }}
-                        {{ if page == current_page }}
-                            <li class="mx-2 active"><span>{{ page }}</span></li>
-                        {{ else }}
-                            <li class="mx-2"><a href="{{ url }}">{{ page }}</a></li>
-                        {{ /if }}
-                    {{ /first }}
-
-                    {{ if slider }}
-                        <li class="mx-2 disabled"><span>...</span></li>
-                    {{ /if }}
-
-                    {{ slider }}
-                        {{ if page == current_page }}
-                            <li class="mx-2 active"><span>{{ page }}</span></li>
-                        {{ else }}
-                            <li><a href="{{ url }}">{{ page }}</a></li>
-                        {{ /if }}
-                    {{ /slider }}
-
-                    {{ if slider || (!slider && last) }}
-                        <li class="mx-2 disabled"><span>...</span></li>
-                    {{ /if }}
-
-                    {{ last }}
-                        {{ if page == current_page }}
-                            <li class="mx-2 active"><span>{{ page }}</span></li>
-                        {{ else }}
-                            <li class="mx-2"><a href="{{ url }}">{{ page }}</a></li>
-                        {{ /if }}
-                    {{ /last }}
-
-                {{ /links:segments }}
-
-                {{ if next_page }}
-                    <li class="mx-2"><a href="{{ next_page }}">&raquo;</a></li>
-                {{ else }}
-                    <li class="mx-2 disabled"><span>&raquo;</span></li>
-                {{ /if }}
-            </ul>
-            {{ /paginate }}
-        </div>
-
+                {{ partial:pagination }}
+            
+                {{ /paginate }}
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
                 {{ posts }}
                     <div class="col-span-1">
@@ -67,18 +20,13 @@
                     </div>
                 {{ /posts }}
             </div>
-            {{ paginate }}
-                {{ if $prev_page || $next_page }}
-                <section class="flex space-x-8 justify-center text-xl pt-16 font-bold">
-                    {{ if $prev_page }}
-                        <a href="{{ $prev_page }}"><span class="squiggle">&larr;</span> Newer articles</a>
-                    {{ /if }}
-                    {{ if $next_page }}
-                        <a href="{{ $next_page }}">Older articles <span class="squiggle">&rarr;</span></a>
-                    {{ /if }}
-                </section>
-                {{ /if }}
-            {{ /paginate }}
+            <div class="mx-auto text-center"> 
+                {{ paginate }}
+    
+                {{ partial:pagination }}
+            
+                {{ /paginate }}
+            </div>
         {{ /collection:flowers }}
     </article>
 
