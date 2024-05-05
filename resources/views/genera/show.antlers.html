@@ -28,6 +28,13 @@
         <h1 class="mb-4"><span style="font-size: 22px;">סוג: </span>{{ title }}</h1>
     </header>
     {{ entries as="posts" paginate="12" sort="date:desc" }}
+        <div class="mx-auto text-center"> 
+            {{ paginate }}
+
+            {{ partial:pagination }}
+        
+            {{ /paginate }}
+        </div>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
             {{ posts }}
                 <div class="col-span-1">
@@ -35,7 +42,14 @@
                 </div>
             {{ /posts }}
         </section>
-        {{ paginate }}
+        <div class="mx-auto text-center"> 
+            {{ paginate }}
+
+            {{ partial:pagination }}
+          
+            {{ /paginate }}
+        </div>
+        {{# {{ paginate }}
             {{ if $prev_page || $next_page }}
             <section class="flex space-x-8 justify-center text-xl pt-16 font-bold">
                 {{ if $prev_page }}
@@ -46,6 +60,6 @@
                 {{ /if }}
             </section>
             {{ /if }}
-        {{ /paginate }}
+        {{ /paginate }} #}}
     {{ /entries }}
 </article>

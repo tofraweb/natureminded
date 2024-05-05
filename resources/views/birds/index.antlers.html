@@ -6,9 +6,9 @@
         </header>
         {{ collection:birds as="posts" paginate="12" sort="date:desc" }}
     
-        <div style="margin: auto; text-align:center"> 
+        <div class="mx-auto text-center"> 
             {{ paginate }}
-            <ul class="flex" style="margin: auto;text-align:center">
+            {{# <ul class="flex" style="margin: auto;text-align:center">
                 {{ if prev_page }}
                     <li class="mx-2"><a href="{{ prev_page }}">&laquo;</a></li>
                 {{ else }}
@@ -56,29 +56,29 @@
                 {{ else }}
                     <li class="mx-2 disabled"><span>&raquo;</span></li>
                 {{ /if }}
-            </ul>
+            </ul> #}}
+
+            {{ partial:pagination }}
+
+              
             {{ /paginate }}
         </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
-                {{ posts }}
-                    <div class="col-span-1">
-                        {{ partial:birds/card }}
-                    </div>
-                {{ /posts }}
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+            {{ posts }}
+                <div class="col-span-1">
+                    {{ partial:birds/card }}
+                </div>
+            {{ /posts }}
+        </div>
+
+        <div class="mx-auto text-center"> 
             {{ paginate }}
-                {{ if $prev_page || $next_page }}
-                <section class="flex space-x-8 justify-center text-xl pt-16 font-bold">
-                    {{ if $prev_page }}
-                        <a href="{{ $prev_page }}"><span class="squiggle">&larr;</span> Newer articles</a>
-                    {{ /if }}
-                    {{ if $next_page }}
-                        <a href="{{ $next_page }}">Older articles <span class="squiggle">&rarr;</span></a>
-                    {{ /if }}
-                </section>
-                {{ /if }}
+
+            {{ partial:pagination }}
+          
             {{ /paginate }}
+        </div>
         {{ /collection:birds }}
     </article>
 
