@@ -12,7 +12,8 @@ module.exports = {
         extend: {
             colors: {
                 'teal': '#008483',
-                'teal-light': '#a6d0cf'
+                'teal-light': '#a6d0cf',
+                'natureminded-green': '#71c02d'
             }
         }
     },
