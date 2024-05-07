@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ settings:site_name }} | {{ title }} </title>
-        <meta name="description" content="{{ excerpt ?? title }}">
+        {{ if {{ url != '/' }}}}
+            <title>{{ settings:site_name }} | {{ title }} </title>
+        {{ else }}
+            <title>{{ settings:site_name }} </title>
+        {{ /if }}
+        <meta name="description" content="ציפורים ופרחי בר שתפגשו כשתצאו לטייל בארץ ישראל. כל הצילומים צולמו על-ידי במהלך טיוליי ברחבי הארץ.">
         <meta name="theme-color" content="00908F">
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>

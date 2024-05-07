@@ -7,6 +7,7 @@ preferences:
     genera:
       columns:
         - title
+        - hero_image
         - name_la
         - name_hu
         - category
