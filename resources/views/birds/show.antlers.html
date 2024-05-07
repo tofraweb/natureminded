@@ -1,38 +1,37 @@
 <article class="max-w-5xl mx-auto px-3">
-    <header class="mx-auto max-w-3xl text-center content" style="direction: rtl;">
-        {{# <h1>{{ $title }}</h1> #}}
-        <h1>{{ $name_he }}</h1>
+    <header class="mx-auto max-w-5xl text-center content" style="direction: rtl;">
+
+        <h1>{{ $name_he }}<br class="md:hidden"><span class="text-3xl mr-4">{{ name_la }}</span></h1> 
 
             <hr class="mb-4">
 
             <div class="flex">
-                {{ if genera }}
-                    {{ genera }}
-                        <div class="ml-4">סוג: <a href="{{ url }}">{{ title }}</a></div>
-                    {{ /genera }}
+                {{ if orders }}
+                    {{ orders }}
+                        <div class="ml-4"><a href="{{ url }}">{{ title }}</a></div>
+                    {{ /orders }}
                 {{ /if }}
 
                 {{ if families }}
                     {{ families }}
-                        <div class="ml-4"   >משפחה: <a href="{{ url }}">{{ title }}</a></div>
+                        <div class="ml-4"><span class=" ml-2"> / </span><a href="{{ url }}">{{ title }}</a></div>
                     {{ /families }}
                 {{ /if }}
 
-                {{ if orders }}
-                    {{ orders }}
-                        <div class="ml-4"   >סדרה: <a href="{{ url }}">{{ title }}</a></div>
-                    {{ /orders }}
+                {{ if genera }}
+                    {{ genera }}
+                        <div class="ml-4"><span class=" ml-2"> / </span><a href="{{ url }}">{{ title }}</a></div>
+                    {{ /genera }}
                 {{ /if }}
 
              </div>
 
              <hr class="mb-4">
 
-             <div class="lg:flex">
+             <div class="lg:flex items-center justify-center">
 
-                <div class="ml-4"><b>{{ name_la }}</b></div>
-                <div class="ml-4"><b>{{ name_en }}</b></div>
-                <div class="ml-4"><b>{{ name_hu }}</b></div>
+                <div class="ml-4"> אנגלית: <b>{{ name_en }}</b></div>
+                <div class="ml-4"> הונגרית: <b>{{ name_hu }}</b></div>
 
              </div>
 
