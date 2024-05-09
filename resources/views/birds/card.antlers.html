@@ -1,8 +1,6 @@
 <div class="relative">
     <a href="{{ $url }}" class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white rounded-xl overflow-hidden">
-        {{# <img class="squiggle height="285" src="{{ glide:hero_image height="570" width="1472" fit="crop_focal" }}" alt="{{ $hero_image:alt }}"> #}}
         <img class="squiggle" height="285" src="{{ glide:hero_image height="570" width="736" fit="crop_focal" }}" alt="{{ $hero_image:alt }}">
-        {{# <div class="absolute inset-10 rounded-md"></div> #}}
         <div class="absolute h-5 left-3 rounded-tl rounded-br top-3 p-2 bg-white opacity-60 flex items-center justify-center">
             <h2 class="text-sm">{{ families }} {{ name_he }} {{ /families }}</h2>
         </div>
