@@ -1,7 +1,10 @@
 ---
+id: f5a53468-017e-4725-b5b6-a745df7e94cb
+published: false
+blueprint: home
 title: Topics
 template: topics/index
-updated_by: ea0c21bd-9703-4bb1-9fed-58ec0e129dd7
-updated_at: 1579534416
-id: f5a53468-017e-4725-b5b6-a745df7e94cb
+updated_by: 9e099556-0278-43e4-b8a2-64728f12886d
+updated_at: 1715426976
+parent: home
 ---

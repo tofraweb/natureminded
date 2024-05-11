@@ -37,3 +37,9 @@ preferences:
       after_save: continue_editing
     flowers:
       after_save: continue_editing
+      columns:
+        - title
+        - hero_image
+        - name_la
+        - name_hu
+        - date

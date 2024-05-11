@@ -1,59 +1,17 @@
 <article class="max-w-5xl mx-auto px-3">
     <header class="mx-auto max-w-3xl text-center content" style="direction: rtl;">
-        {{# <h1>{{ $title }}</h1> #}}
-        <h1>{{ $name_he }}</h1>
 
-            <hr class="mb-4">
+      <h1>{{ $name_he }}<br class="md:hidden"><span class="text-3xl mr-4">{{ name_la }}</span></h1> 
 
-            <div class="flex">
-                {{ if genera }}
-                    {{ genera }}
-                        <div class="ml-4">סוג: <a href="{{ url }}">{{ title }}</a></div>
-                    {{ /genera }}
-                {{ /if }}
+      {{ partial:breadcrumb}}
 
-                {{ if families }}
-                    {{ families }}
-                        <div class="ml-4"   >משפחה: <a href="{{ url }}">{{ title }}</a></div>
-                    {{ /families }}
-                {{ /if }}
+      <div class="lg:flex items-center justify-center mb-4">
 
-                {{ if orders }}
-                    {{ orders }}
-                        <div class="ml-4"   >סדרה: <a href="{{ url }}">{{ title }}</a></div>
-                    {{ /orders }}
-                {{ /if }}
+        <div class="ml-4"> הונגרית: <b>{{ name_hu }}</b></div>
 
-             </div>
+      </div>
 
-             <hr class="mb-4">
 
-             <div class="lg:flex">
-
-                <div class="ml-4"><b>{{ name_la }}</b></div>
-                <div class="ml-4"><b>{{ name_en }}</b></div>
-                <div class="ml-4"><b>{{ name_hu }}</b></div>
-
-             </div>
-
-        {{ $intro }}
-        <div class="my-12 flex items-center justify-center">
-            {{ if $author }}
-            <img src="{{ $author:avatar ?? $author:email | gravatar(160) }}" class="h-20 w-20 my-0 rounded-full mr-4">
-            {{ /if }}
-            <div class="text-left">
-                {{ if author }}
-                <div>
-                    <a class="font-bold no-underline" href="/authors/{{ $author:handle }}">
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-hot-pink to-purple-500">
-                            {{ $author:name }}
-                        </span>
-                    </a>
-                </div>
-                {{ /if }}
-                <time datetime="{{ $date | format('Y-m-d') }}">{{ $date }}</time>
-            </div>
-        </div>
     </header>
     <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
     <section class="max-w-3xl mx-auto py-6 lg:py-12 content">

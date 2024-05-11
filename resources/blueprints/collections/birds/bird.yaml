@@ -95,6 +95,18 @@ tabs:
               mode: select
               width: 33
           -
+            handle: more_info_link
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'More info link'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: content
             field:
               type: markdown
