@@ -3,6 +3,7 @@
     <article class="max-w-6xl mx-auto px-3">
         <header class="mx-auto max-w-xl text-center content">
             <h1 class="mb-4">ציפורי ישראל</h1>
+            <h3 class="mb-4">{{ collection:count in="birds" }} ציפרים</h3>
         </header>
         {{ collection:birds as="posts" paginate="12" sort="date:desc" }}
     
