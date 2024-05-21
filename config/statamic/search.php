@@ -28,12 +28,12 @@ return [
         'default' => [
             'driver' => 'local',
             'searchables' => 'all',
-            'fields' => ['title'],
+            'fields' => ['name_he', 'name_la', 'name_en', 'name_hu'],
         ],
 
-        // 'blog' => [
+        // 'birds' => [
         //     'driver' => 'local',
-        //     'searchables' => 'collection:blog',
+        //     'searchables' => 'collection:birds',
         // ],
 
     ],
