@@ -1,5 +1,6 @@
-<nav class="flex max-w-5xl" aria-label="Breadcrumb">
-    <ol role="list" class="flex h-12 w-full space-x-4 rounded-md bg-white px-6 shadow" >
+<nav class="flex max-w-5xl relative" aria-label="Breadcrumb">
+    <a type="button" value="Back" onclick="goBack()"><img class="absolute top-3 left-3 w-6 cursor-pointer block" src="/assets/site/close-icon.png" alt="Back"></a>
+    <ol role="list" class="flex ml-0 h-12 w-full rounded-md bg-white px-2 shadow" >
     <li class="flex">
         <div class="flex items-center">
         <a href="/" class="text-gray-400 hover:text-gray-500">
@@ -18,7 +19,7 @@
                 <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
             </svg>
     
-        <a href="{{ url }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }} - {{ name_la }}</a>
+        <a href="{{ url }}" class="text-xs md:text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }}</a>
         </div>
         {{ /orders}}
         {{ /if }}
@@ -30,7 +31,7 @@
             <svg class="h-5 w-5 flex-shrink-0 text-gray-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
               </svg>
-        <a href="{{ url }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }} - {{ name_la }}</a>
+        <a href="{{ url }}" class="text-xs md:text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }}</a>
         </div>
     </li>
     {{ /families}}
@@ -42,7 +43,7 @@
             <svg class="h-5 w-5 flex-shrink-0 text-gray-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
               </svg>
-        <a href="{{ url }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }} - {{ name_la }}</a>
+        <a href="{{ url }}" class="text-xs md:text-sm font-medium text-gray-500 hover:text-gray-700">{{ title }}</a>
         </div>
     </li>
     {{ /genera}}
