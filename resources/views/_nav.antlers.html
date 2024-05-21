@@ -21,11 +21,12 @@
           </div>
           <div class="hidden lg:ml-6 lg:flex lg:space-x-8">
             <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <a href="/birds" class="inline-flex items-center border-b-2 border-natureminded-green px-1 ml-8 pt-1 text-sm font-medium text-gray-900">ציפורים</a>
-            <a href="/flowers" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">פרחי בר</a>
-            <a href="/orders/" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">סדרות</a>
-            <a href="/families/" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">משפחות</a>
-            <a href="/genera/" class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">סוגים</a>
+            <a href="/" class="inline-flex items-center border-b-2 {{ if url == '/'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 ml-8 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">בית</a>
+            <a href="/birds" class="inline-flex items-center border-b-2 {{ if url == '/birds'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 ml-8 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">ציפורים</a>
+            <a href="/flowers" class="inline-flex items-center border-b-2 {{ if url == '/flowers'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">פרחי בר</a>
+            <a href="/orders" class="inline-flex items-center border-b-2 {{ if url == '/orders'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">סדרות</a>
+            <a href="/families" class="inline-flex items-center border-b-2 {{ if url == '/families'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">משפחות</a>
+            <a href="/genera" class="inline-flex items-center border-b-2 {{ if url == '/genera'}} border-natureminded-green text-gray-900 {{ else }} border-transparent text-gray-500 {{ /if }} px-1 pt-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700">סוגים</a>
           </div>
         </div>
         <div class="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
