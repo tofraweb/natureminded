@@ -107,10 +107,61 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
+            handle: source_link
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Source Link'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: content
             field:
               type: markdown
               localizable: true
+          -
+            handle: body_length
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Length
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: body_weight
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Weight
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: wingspan
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Wingspan
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:

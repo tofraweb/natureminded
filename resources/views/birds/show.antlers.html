@@ -1,4 +1,4 @@
-
+{{# 
 <article class="max-w-5xl mx-auto px-3">
 
     {{ partial:breadcrumb}}
@@ -43,41 +43,60 @@
     {{ if $settings:show_signup }}
         {{ partial:sign-up}}
     {{ /if }}
-</article>
+</article> #}}
 
-{{# <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div class="lg:pr-4">
+<article class="max-w-5xl mx-auto px-3">
+
+  {{# {{ partial:breadcrumb}} #}}
+
+  {{# <header class="mx-auto max-w-5xl mt-2 text-center content" style="direction: rtl;">
+
+      <h1>{{ $name_he }}<br class="md:hidden"><span class="text-3xl mr-4">{{ name_la }}</span></h1> 
+
+  </header> #}}
+
+
+  <div class="bg-white">
+
+    <div class="mx-auto max-w-7xl">
+      {{ partial:breadcrumb}}
+
+      <div class="mx-auto md:flex max-w-2xl gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none">
+        <div class="lg:pr-4 pt-7 md:flex-initial md:w-3/5">
             <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
         </div>
-        <div>
+        <div class="pt-3  md:flex-initial md:w-2/5">
           <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
             <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ $name_he }}<br><span class="text-xl">{{ name_la }}</span></h1>
             <div class="max-w-xl">
-              <p class="mt-6">Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
+              <p class="mt-6">{{ content }}</p><br>
+              <p>מקור: <a href="">ויקיפדיה</a></p>
             </div>
           </div>
           <dl class="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
             <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">Founded</dt>
-              <dd class="mt-2 text-xl font-bold leading-10 tracking-tight text-gray-900">2021</dd>
+              <dt class="text-sm font-semibold leading-6 text-gray-600">אורך (ס״מ)</dt>
+              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900">{{ body_length }}</dd>
             </div>
             <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">Employees</dt>
-              <dd class="mt-2 text-xl font-bold leading-10 tracking-tight text-gray-900">37</dd>
+              <dt class="text-sm font-semibold leading-6 text-gray-600">משקל (גר׳)</dt>
+              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900">{{ body_weight }}</dd>
             </div>
             <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">Countries</dt>
-              <dd class="mt-2 text-xl font-bold leading-10 tracking-tight text-gray-900">12</dd>
+              <dt class="text-sm font-semibold leading-6 text-gray-600">מזון</dt>
+              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900"></dd>
             </div>
-            <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">Raised</dt>
-              <dd class="mt-2 text-xl font-bold leading-10 tracking-tight text-gray-900">$25M</dd>
-            </div>
+            {{# <div>
+              <dt class="text-sm font-semibold leading-6 text-gray-600">מוטת כנפים</dt>
+              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900"></dd>
+            </div> #}}
           </dl>
         </div>
       </div>
     </div>
-  </div> #}}
+  </div>
+
+</article>
+
+
   
