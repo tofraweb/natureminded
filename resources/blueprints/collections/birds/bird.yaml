@@ -166,32 +166,12 @@ tabs:
         display: Sounds
         fields:
           -
-            handle: bird_song
-            field:
-              max_files: 1
-              mode: list
-              container: assets
-              folder: birds/sounds
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: Song
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: sound_type_1
+            handle: song_code
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Sound Type (1)'
-              instructions: 'Optional, default is ׳שירה׳'
+              display: 'Song Code'
               width: 50
               listable: hidden
               instructions_position: above
@@ -199,32 +179,12 @@ tabs:
               replicator_preview: true
               hide_display: false
           -
-            handle: bird_call
-            field:
-              max_files: 1
-              mode: list
-              container: assets
-              folder: birds/sounds
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
-              type: assets
-              display: Call
-              width: 50
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: sound_type_2
+            handle: call_code
             field:
               input_type: text
               antlers: false
               type: text
-              display: 'Sound type (2)'
-              instructions: 'Optional, default is ׳קריאה׳'
+              display: 'Call Code'
               width: 50
               listable: hidden
               instructions_position: above
