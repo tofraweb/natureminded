@@ -168,16 +168,22 @@ tabs:
           -
             handle: bird_song
             field:
-              input_type: text
-              antlers: false
-              type: text
+              max_files: 1
+              mode: list
+              container: assets
+              folder: birds/sounds
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
               display: Song
+              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
-              width: 75
           -
             handle: sound_type_1
             field:
@@ -186,7 +192,7 @@ tabs:
               type: text
               display: 'Sound Type (1)'
               instructions: 'Optional, default is ׳שירה׳'
-              width: 25
+              width: 50
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -196,7 +202,6 @@ tabs:
             handle: bird_call
             field:
               max_files: 1
-              min_files: 1
               mode: list
               container: assets
               folder: birds/sounds
