@@ -67,10 +67,31 @@
         </div>
         <div class="pt-3  md:flex-initial md:w-2/5">
           <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
-            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ $name_he }}<br><span class="text-xl">{{ name_la }}</span></h1>
+            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ $name_he }}<br>
+              <span class="text-xl">{{ name_la }} </span><br><span class="text-lg">{{ name_en }}</span></h1>
+              
+
             <div class="max-w-xl">
               <p class="mt-6">{{ content }}</p><br>
-              <p>מקור: <a href="">ויקיפדיה</a></p>
+              <div class="flex">
+                {{ if bird_song }}
+                <div class="pt-3"><span class="text-lg">שירה:</span></div>
+                <audio controls class="mr-4" style="width: 120px;"> 
+                  <source src="{{ bird_song }}" type="audio/mpeg">
+                </audio><br>
+                {{ /if }}
+                {{ if bird_call }}
+                  {{ if sound_type_2 }}
+                    <div class="pt-3"><span class="text-lg">{{ sound_type_2 }}</span></div>
+                  {{ else }}
+                    <div class="pt-3"><span class="text-lg">קריאה:</span></div>
+                  {{ /if }}
+                  <audio controls class="mr-4" style="width: 120px;"> 
+                    <source src="{{ bird_call }}" type="audio/mpeg"><
+                  </audio><br>
+                {{ /if }}
+              </div>
+              {{# <p>מקור: <a href="">ויקיפדיה</a></p> #}}
             </div>
           </div>
           <dl class="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
