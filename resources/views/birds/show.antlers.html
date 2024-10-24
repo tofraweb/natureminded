@@ -1,60 +1,5 @@
-{{# 
-<article class="max-w-5xl mx-auto px-3">
-
-    {{ partial:breadcrumb}}
-
-    <header class="mx-auto max-w-5xl mt-8 text-center content" style="direction: rtl;">
-
-        <h1>{{ $name_he }}<br class="md:hidden"><span class="text-3xl mr-4">{{ name_la }}</span></h1> 
-            
-            <div class="lg:flex items-center justify-center  mb-4">
-
-                <div class="ml-4"> אנגלית: <b>{{ name_en }}</b></div>
-                <div class="ml-4"> הונגרית: <b>{{ name_hu }}</b></div>
-
-            </div>
-
-    </header>
-
-    <article class="lg:py-4 max-w-5xl">
-        <div class="p-4 text-lg">
-            {{ content | widont }}
-        </div>
-        <div class="p-4 text-lg text-natureminded-green">
-            <a href="{{ more_info_link }}" target="_blank">אני רוצה לדעת יותר</a>
-        </div>
-    </article>
-    <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
-    <section class="max-w-3xl mx-auto py-6 lg:py-12 content">
-        {{ main_content }}
-            {{ if $type == "text" }}
-                {{ $text }}
-            {{ elseif $type == "code_block" }}
-                <pre class="language-{{ $mode ?? 'php' }} rounded"><code>{{ $code }}</code></pre>
-            {{ elseif $type == "image" }}
-                <figure>
-                    <img src="{{ $image }}" alt="{{ $caption }}" />
-                    <figcaption>{{ $caption }}</figcaption>
-                </figure>
-            {{ /if }}
-        {{ /main_content }}
-    </section>
-
-    {{ if $settings:show_signup }}
-        {{ partial:sign-up}}
-    {{ /if }}
-</article> #}}
 
 <article class="max-w-5xl mx-auto px-3">
-
-  {{# {{ partial:breadcrumb}} #}}
-
-  {{# <header class="mx-auto max-w-5xl mt-2 text-center content" style="direction: rtl;">
-
-      <h1>{{ $name_he }}<br class="md:hidden"><span class="text-3xl mr-4">{{ name_la }}</span></h1> 
-
-  </header> #}}
-
 
   <div class="bg-white">
 
@@ -74,61 +19,105 @@
               <iframe src='https://xeno-canto.org/{{ call_code }}/embed?simple=1' scrolling='no' frameborder='1' width='280' height='115'></iframe>
               {{ /if }}
             </div>
+            <div>
+              {{# <div class="px-4 sm:px-0">
+                <h3 class="text-base font-semibold leading-7 text-gray-900">Applicant Information</h3>
+                <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
+              </div> #}}
+              <div class="mt-6 border-t border-gray-100">
+                <dl class="divide-y divide-gray-100">
+                  <div class="bg-gray-50 px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">תפוצה בישראל</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ distribution }}</dd>
+                  </div>
+                  <div class="bg-white px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">איזור מחיה</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ habitat }}</dd>
+                  </div>
+                  <div class="bg-gray-50 px-4 py-2 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">מזון</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ food }}</dd>
+                  </div>
+                  {{# <div class="bg-white px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">Salary expectation</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">$120,000</dd>
+                  </div> #}}
+                  {{# <div class="bg-gray-50 px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">About</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
+                  </div> #}}
+                  {{ if body_length || wingspan || body_weight }}
+                  <div class="bg-white px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                    <dt class="text-sm font-medium leading-6 text-gray-900">מידות</dt>
+                    <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                      <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
+                        {{ if body_length }}
+                        <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
+                          <div class="flex w-0 flex-1 items-center">
+                            אורך גוף (ס״מ)
+                          </div>
+                          <div class="ml-4 flex-shrink-0">
+                            {{ body_length }}
+                          </div>
+                        </li>
+                        {{ /if }}
+                        {{ if wingspan }}
+                        <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
+                          <div class="flex w-0 flex-1 items-center">
+                            מוטת כנף (ס״מ)
+                          </div>
+                          <div class="ml-4 flex-shrink-0">
+                            {{ wingspan }}
+                          </div>
+                        </li>
+                        {{ /if }}
+                        {{ if body_weight }}
+                        <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
+                          <div class="flex w-0 flex-1 items-center">
+                            משקל (גר׳)
+                          </div>
+                          <div class="ml-4 flex-shrink-0">
+                            {{ body_weight }}
+                          </div>
+                        </li>
+                        {{ /if }}
+                      </ul>
+                    </dd>
+                  </div>
+                  {{ /if }}
+                </dl>
+              </div>
+            </div>
         </div>
         <div class="pt-3  md:flex-initial md:w-2/5">
           <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
             <h1 class="mt-2 hidden md:block text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ $name_he }}<br>
               <span class="text-xl text-gray-600">{{ name_la }} </span><br><span class="text-lg text-gray-400">{{ name_en }}</span></h1>
-              
-            <div class="max-w-xl">
-              <p class="mt-6">{{ content }}</p><br>
-              {{# <div class="flex">
-                {{ if bird_song }}
-                <div class="pt-3"><span class="text-lg">שירה:</span></div>
-                <audio controls class="mr-4" style="width: 120px;"> 
-                  <source src="{{ bird_song }}" type="audio/mpeg">
-                </audio><br>
-                {{ /if }}
-                {{ if bird_call }}
-                  {{ if sound_type_2 }}
-                    <div class="pt-3"><span class="text-lg">{{ sound_type_2 }}</span></div>
-                  {{ else }}
-                    <div class="pt-3"><span class="text-lg">קריאה:</span></div>
-                  {{ /if }}
-                  <audio controls class="mr-4" style="width: 120px;"> 
-                    <source src="{{ bird_call }}" type="audio/mpeg"><
-                  </audio><br>
-                {{ /if }}
-              </div> #}}
-              {{# <p>מקור: <a href="{{ more_info_link }}">ויקיפדיה</a></p> #}}
-              <p><a class="text-natureminded-green" href="{{ more_info_link }}" target="_blank">עוד פרטים</a></p>
-
-            </div>
           </div>
-          <dl class="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
+          <dl class="grid pb-4 grid-cols-2 gap-8 border-b border-gray-900/10 sm:grid-cols-2">
             <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">אורך (ס״מ)</dt>
-              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900">{{ body_length }}</dd>
+              <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
             </div>
             <div>
-              <dt class="text-sm font-semibold leading-6 text-gray-600">משקל (גר׳)</dt>
-              <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900">{{ body_weight }}</dd>
+              <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
             </div>
-            <div>
+            {{# <div>
               <dt class="text-sm font-semibold leading-6 text-gray-600">מזון</dt>
               <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900"></dd>
-            </div>
+            </div> #}}
             {{# <div>
               <dt class="text-sm font-semibold leading-6 text-gray-600">מוטת כנפים</dt>
               <dd class="mt-2 text-md font-bold leading-10 tracking-tight text-gray-900"></dd>
             </div> #}}
           </dl>
+          <div class="max-w-xl pt-4">
+
+            <p class="pt-4"><a class="text-natureminded-green" href="{{ more_info_link }}" target="_blank">עוד פרטים</a></p>
+
+          </div>
         </div>
       </div>
     </div>
   </div>
 
 </article>
-
-
-  

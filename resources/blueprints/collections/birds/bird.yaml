@@ -123,45 +123,6 @@ tabs:
             field:
               type: markdown
               localizable: true
-          -
-            handle: body_length
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Length
-              width: 33
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: body_weight
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Weight
-              width: 33
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
-          -
-            handle: wingspan
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Wingspan
-              width: 33
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
       -
         display: Sounds
         fields:
@@ -186,6 +147,84 @@ tabs:
               type: text
               display: 'Call Code'
               width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+      -
+        display: Info
+        fields:
+          -
+            handle: distribution
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Distribution
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: habitat
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Habitat
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: food
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Food
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: body_length
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Length
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: wingspan
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Wingspan
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: body_weight
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Weight
+              width: 33
               listable: hidden
               instructions_position: above
               visibility: visible
